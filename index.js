@@ -29,12 +29,17 @@ const bot6 = new Bot(process.env.BOT_TOKEN_6, {
     polling: true,
 });
 
+const bot7 = new Bot(process.env.BOT_TOKEN_7, {
+    polling: true,
+});
+
 bot1.on("polling_error", console.log);
 bot2.on("polling_error", console.log);
 bot3.on("polling_error", console.log);
 bot4.on("polling_error", console.log);
 bot5.on("polling_error", console.log);
 bot6.on("polling_error", console.log);
+bot7.on("polling_error", console.log);
 
 
 console.log("Bot started");
@@ -56,6 +61,9 @@ console.log("Coldcard Support started");
 
 setupBot(bot6, "Pepeto Support");
 console.log("Pepeto Support started");
+
+setupBot(bot7, "Blockdag Support");
+console.log("Blockdag Support started");
 
 
 function setupBot(bot, supportName) {
